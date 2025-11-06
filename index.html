@@ -4,22 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Anthony Breeganzo Thomas | Platform Engineer at Kyndryl | DevOps & AI Specialist</title>
+    <meta name="description" content="Platform Engineer & DevOps Specialist at Kyndryl in Bangalore specializing in AWS, Kubernetes, Terraform, Docker, and Agentic AI automation. MSc AI from Queen Mary University | AWS & Azure Certified | Commonwealth Scholar">
+    <meta name="keywords" content="Platform Engineer, DevOps Engineer, AWS, Azure, Kubernetes, Terraform, Docker, Backstage, ArgoCD, Kyndryl, Bangalore, AI Engineer, Cloud Native, CI/CD, Infrastructure as Code, Python, React, Anthony Breeganzo Thomas">
+    <meta name="author" content="Anthony Breeganzo Thomas">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Anthony Breeganzo Thomas | Platform Engineer at Kyndryl">
+    <meta property="og:description" content="Platform Engineer & DevOps Specialist at Kyndryl specializing in AWS, Kubernetes, Terraform, and Agentic AI. Commonwealth Scholar with MSc AI from Queen Mary University.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://breeganzo.github.io/Personal_Website/">
+    <meta property="og:image" content="https://breeganzo.github.io/Personal_Website/assets/profile-pic.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anthony Breeganzo Thomas | Platform Engineer at Kyndryl">
+    <meta name="twitter:description" content="Platform Engineer & DevOps Specialist specializing in AWS, Kubernetes, Terraform, and Agentic AI">
+    <meta name="twitter:image" content="https://breeganzo.github.io/Personal_Website/assets/profile-pic.png">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader-container">
+        <div class="loader"></div>
+        <p class="loader-text">Loading Portfolio...</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
     <nav id="desktop-nav">
       <div class="logo">Anthony Breeganzo Thomas</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+    
     <nav id="hamburger-nav">
       <div class="logo">Anthony Breeganzo Thomas</div>
       <div class="hamburger-menu">
@@ -30,395 +65,921 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- Commonwealth Scholar Banner -->
+    <div class="commonwealth-banner">
+      <div class="banner-content">
+        <span class="banner-icon">🎓</span>
+        <span class="banner-text">Commonwealth Scholar | MSc Artificial Intelligence | Queen Mary University of London</span>
+        <span class="banner-icon">🏆</span>
+      </div>
+    </div>
+
+    <!-- Hero Section with Profile -->
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Anthony Breeganzo Thomas profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Anthony Breeganzo Thomas</h1>
-        <p class="section__text__p2">AI Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
+      <div class="profile-container">
+        <div class="profile-image-wrapper">
+          <img src="./assets/profile-pic.png" alt="Anthony Breeganzo Thomas" class="profile-image" />
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/breeganzo/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Breeganzo'"
-          />
+        <div class="profile-content">
+          <h1 class="profile-name">Anthony Breeganzo Thomas</h1>
+          <h2 class="profile-title">Platform Engineer at <span class="company-highlight">Kyndryl</span></h2>
+          <p class="profile-subtitle">DevOps Specialist | AI Automation | Cloud-Native Development</p>
+          <p class="profile-location">📍 Bangalore, India | 📞 +91 9108615757 | 🎓 MSc AI (Queen Mary University London)</p>
+          <p class="profile-tagline">
+            Building cloud-native applications with AWS, Kubernetes & Terraform at Kyndryl | Integrating Agentic AI into developer platforms | Specialized in CI/CD automation, containerization & intelligent workflow systems
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/breeganzo/" target="_blank" aria-label="LinkedIn" class="social-link-btn">
+              <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" />
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Breeganzo" target="_blank" aria-label="GitHub" class="social-link-btn">
+              <img src="./assets/github.png" alt="GitHub" class="social-icon" />
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:anthonybreeganzo02@gmail.com" aria-label="Email" class="social-link-btn">
+              <img src="./assets/email.png" alt="Email" class="social-icon" />
+              <span>Email Me</span>
+            </a>
+          </div>
+          <div class="cta-buttons">
+            <button class="btn-primary" onclick="window.open('./assets/resume.pdf')">📄 Download Resume</button>
+            <button class="btn-secondary" onclick="location.href='#contact'">💼 Let's Connect</button>
+            <button class="btn-tertiary" onclick="location.href='#projects'">🚀 View Projects</button>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- About Section -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+      <h2 class="section-title">
+        <span class="section-icon">👨‍💻</span>
+        About Me
+        <span class="section-underline"></span>
+      </h2>
+      <div class="about-content">
+        <div class="professional-summary">
+          <h3 class="summary-title">🎯 Professional Summary</h3>
+          <p class="about-text">
+            <strong>Platform Engineer & DevOps Specialist</strong> with expertise in cloud-native application development, 
+            container orchestration, and AI-driven automation. Currently at Kyndryl, leading the integration of Agentic AI into 
+            developer platforms using A2A and MCP protocols. MSc in Artificial Intelligence from Queen Mary University of London 
+            (Commonwealth Scholar) with hands-on experience building scalable infrastructure, CI/CD pipelines, and intelligent automation systems.
+          </p>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Python Developer</p>
-              <br>
-              <p>1+ year <br />Data Analyst and PowerBI Expert</p>
-              <br>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-
-              <br />Queen Mary University of London <br>
-                <i>MSc (Artificial Intelligence)</i> </p>
-              <p> <br>REVA University <br>
-                <i>B.Tech (Computer Science and Engineering)</i>
-                
-                
-            </div>
-          </div>
-          <div class="text-container">
-            <p style="text-align:justify;">
-              Aspiring Data Scientist with a strategic background in software engineering, currently expanding my expertise through a Master’s 
-              in Artificial Intelligence. Focused on leveraging data analysis and market intelligence, I aim to enhance product strategies and 
-              improve team performance. My experience in software development and project management equips me with the insights needed to 
-              drive product innovation and manage complex projects in fast-paced environments. I am eager to apply my advanced analytical skills
-               and deep understanding of data-driven decision-making to meet high standards and regulations.
-
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Machine Learning and Data Science</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PyTorch</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PowerBi</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tableau</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Azure</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AWS</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GAN</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Web Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/breeganzo'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/breeganzo'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Breeganzo/MScProject'"
-              >
-                Github
-              <!-- </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/breeganzo'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/breeganzo'"
-              >
-                Github -->
-              <!-- </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/breeganzo'"
-              >
-                Live Demo
-              </button> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:anthonybreeganzo02@gmail.com">anthonybreeganzo02@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/breeganzo/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        
+        <div class="key-achievements">
+          <h3 class="summary-title">🏆 Key Achievements</h3>
+          <ul class="achievements-list">
+            <li><strong>Agentic AI Platform:</strong> Leading development of intelligent Backstage integration with document summarization, automated Jira tickets, and Confluence workflows using A2A/MCP protocols</li>
+            <li><strong>Cloud Infrastructure:</strong> Built Docker images and serverless Lambda functions for TVG (UK) project with automated AWS ECR deployment pipelines</li>
+            <li><strong>Developer Platform:</strong> Developed comprehensive Backstage templates (Go, Flask, React) with CI/CD automation, improving developer productivity across teams</li>
+            <li><strong>Infrastructure as Code:</strong> Created reusable Terraform templates for AWS resources (EC2, S3, RDS, ECR) for scalable client POCs</li>
+            <li><strong>AI/ML Expertise:</strong> Enhanced AI pipeline accuracy by 15% and performance by 20% using diffusion models at Zero2AI internship</li>
+r            <li><strong>Commonwealth Scholar:</strong> Fully funded MSc AI scholarship to study in the UK for Innovation, Technology & Sustainability</li>
           </ul>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Anthony Breeganzo Thomas. All Rights Reserved.</p>
+        
+        <div class="tech-focus">
+          <h3 class="summary-title">💡 Technical Expertise</h3>
+          <p class="about-text">
+            <strong>DevOps & Cloud:</strong> AWS (EC2, S3, RDS, Lambda, ECR), Azure (Databricks, Synapse, ML), Docker, Kubernetes, Terraform, Helm<br>
+            <strong>CI/CD & Automation:</strong> GitHub Actions, GitLab, Backstage, CI/CD Pipelines, Infrastructure as Code<br>
+            <strong>AI/ML Development:</strong> TensorFlow, PyTorch, Scikit-learn, Agentic AI, A2A Protocol, MCP Protocol, Computer Vision<br>
+            <strong>Programming:</strong> Python, Java, Go, Flask, React, Bash<br>
+            <strong>Data & Analytics:</strong> SQL, Tableau, Power BI, Pandas, NumPy
+          </p>
+        </div>
+        
+        <p class="about-text cta-text">
+          <strong>🚀 Open to Platform Engineering, DevOps, and AI/ML Engineering opportunities.</strong><br>
+          Passionate about building intelligent automation systems that enhance developer productivity and streamline operational processes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats/Metrics Section -->
+    <section id="stats" class="stats-section">
+      <h2 class="section-title">
+        <span class="section-icon">📊</span>
+        Impact & Achievements
+        <span class="section-underline"></span>
+      </h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Terraform Modules Deployed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="30">0</div>
+          <div class="stat-label">CI/CD Pipelines Automated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Backstage Plugins Integrated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">% Infrastructure as Code</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-label">Cloud Services Deployed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="9">0</div>
+          <div class="stat-label">Months at Kyndryl</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+      <h2 class="section-title">
+        <span class="section-icon">🏅</span>
+        Certifications & Credentials
+        <span class="section-underline"></span>
+      </h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-badge">
+            <img src="./assets/aws-cloud-practitioner.png" alt="AWS Cloud Practitioner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="cert-placeholder" style="display: none;">
+              <span style="font-size: 3rem;">☁️</span>
+            </div>
+          </div>
+          <h3 class="cert-title">AWS Cloud Practitioner</h3>
+          <p class="cert-description">AWS Certified Cloud Practitioner (CLF-C02)</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">
+            <img src="./assets/azure-fundamentals.png" alt="Azure Fundamentals" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="cert-placeholder" style="display: none;">
+              <span style="font-size: 3rem;">📘</span>
+            </div>
+          </div>
+          <h3 class="cert-title">Azure Fundamentals</h3>
+          <p class="cert-description">Microsoft Certified: Azure Fundamentals (AZ-900)</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">
+            <img src="./assets/ai-practitioner.png" alt="AI Practitioner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="cert-placeholder" style="display: none;">
+              <span style="font-size: 3rem;">🧠</span>
+            </div>
+          </div>
+          <h3 class="cert-title">Azure AI Fundamentals</h3>
+          <p class="cert-description">Microsoft Certified: Azure AI Fundamentals (AI-900)</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">
+            <div class="cert-placeholder">
+              <span style="font-size: 3rem;">🎓</span>
+            </div>
+          </div>
+          <h3 class="cert-title">Commonwealth Scholar</h3>
+          <p class="cert-description">Fully funded scholarship to study MSc AI in the UK - Queen Mary University London</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">
+            <img src="./assets/aws-ai-practitioner.png" alt="AWS AI Practitioner" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="cert-placeholder" style="display: none;">
+              <span style="font-size: 3rem;">🤖</span>
+            </div>
+          </div>
+          <h3 class="cert-title">AWS AI Practitioner</h3>
+          <p class="cert-description">AWS Certified AI Practitioner (AIF-C01)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies-section">
+      <h2 class="section-title">
+        <span class="section-icon">🛠️</span>
+        Technologies I Work With
+        <span class="section-underline"></span>
+      </h2>
+      <div class="tech-icons-grid">
+        <div class="tech-icon-card" title="Amazon Web Services">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tech-logo" />
+          <p class="tech-name">AWS</p>
+        </div>
+        <div class="tech-icon-card" title="Microsoft Azure">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="tech-logo" />
+          <p class="tech-name">Azure</p>
+        </div>
+        <div class="tech-icon-card" title="Kubernetes">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="tech-logo" />
+          <p class="tech-name">Kubernetes</p>
+        </div>
+        <div class="tech-icon-card" title="Docker">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-logo" />
+          <p class="tech-name">Docker</p>
+        </div>
+        <div class="tech-icon-card" title="Terraform">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="tech-logo" />
+          <p class="tech-name">Terraform</p>
+        </div>
+        <div class="tech-icon-card" title="Python">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo" />
+          <p class="tech-name">Python</p>
+        </div>
+        <div class="tech-icon-card" title="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-logo" />
+          <p class="tech-name">GitHub</p>
+        </div>
+        <div class="tech-icon-card" title="React">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-logo" />
+          <p class="tech-name">React</p>
+        </div>
+        <div class="tech-icon-card" title="PostgreSQL">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-logo" />
+          <p class="tech-name">PostgreSQL</p>
+        </div>
+        <div class="tech-icon-card" title="TensorFlow">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-logo" />
+          <p class="tech-name">TensorFlow</p>
+        </div>
+        <div class="tech-icon-card" title="Jenkins">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" class="tech-logo" />
+          <p class="tech-name">Jenkins</p>
+        </div>
+        <div class="tech-icon-card" title="GitLab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" class="tech-logo" />
+          <p class="tech-name">GitLab</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currently Learning Section -->
+    <section id="learning" class="learning-section">
+      <h2 class="section-title">
+        <span class="section-icon">📚</span>
+        Currently Learning
+        <span class="section-underline"></span>
+      </h2>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <div class="learning-icon">🤖</div>
+          <h3 class="learning-title">Advanced Agentic AI</h3>
+          <p class="learning-description">MCP (Model Context Protocol) & A2A (Agent-to-Agent) integration for autonomous developer workflows</p>
+          <div class="learning-progress">
+            <div class="progress-bar" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="learning-icon">🔐</div>
+          <h3 class="learning-title">Azure Security</h3>
+          <p class="learning-description">Preparing for Azure Security Engineer Associate (AZ-500) certification</p>
+          <div class="learning-progress">
+            <div class="progress-bar" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="learning-icon">🎯</div>
+          <h3 class="learning-title">AWS Solutions Architect</h3>
+          <p class="learning-description">Advancing from Cloud Practitioner to Solutions Architect Associate certification</p>
+          <div class="learning-progress">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+        </div>
+        <div class="learning-card">
+          <div class="learning-icon">🚀</div>
+          <h3 class="learning-title">GitOps & ArgoCD</h3>
+          <p class="learning-description">Deep diving into GitOps practices and advanced ArgoCD deployment strategies</p>
+          <div class="learning-progress">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">
+        <span class="section-icon">⚡</span>
+        Technical Skills
+        <span class="section-underline"></span>
+      </h2>
+      <p class="skills-subtitle">💡 <em>Click highlighted skills (🔗) to view related projects on GitHub</em></p>
+      <div class="skills-grid">
+        <!-- GitHub-Linked Skills (Priority) -->
+        <div class="skill-item github-linked" data-project="cloud" onclick="location.href='#project-agentic-ai'">
+          <span class="skill-name">Python 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="dev" onclick="location.href='#project-backstage'">
+          <span class="skill-name">Backstage 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#project-agentic-ai'">
+          <span class="skill-name">Agentic AI 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#project-agentic-ai'">
+          <span class="skill-name">A2A Protocol 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#project-agentic-ai'">
+          <span class="skill-name">MCP Protocol 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="cloud" onclick="location.href='#project-docker'">
+          <span class="skill-name">Docker 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="cloud" onclick="location.href='#project-terraform'">
+          <span class="skill-name">Terraform 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="cloud" onclick="location.href='#project-terraform'">
+          <span class="skill-name">AWS (EC2, S3, RDS, Lambda, ECR) 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="dev" onclick="location.href='#project-backstage'">
+          <span class="skill-name">Go 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="dev" onclick="location.href='#project-backstage'">
+          <span class="skill-name">Flask 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="dev" onclick="location.href='#project-backstage'">
+          <span class="skill-name">React 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="dev" onclick="location.href='#project-backstage'">
+          <span class="skill-name">GitHub Actions 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="cloud" onclick="location.href='#project-docker'">
+          <span class="skill-name">Kubernetes 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#projects'">
+          <span class="skill-name">TensorFlow 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#projects'">
+          <span class="skill-name">PyTorch 🔗</span>
+        </div>
+        <div class="skill-item github-linked" data-project="msc" onclick="location.href='#projects'">
+          <span class="skill-name">Computer Vision 🔗</span>
+        </div>
+        
+        <!-- Other Professional Skills -->
+        <div class="skill-item" data-project="cloud">
+          <span class="skill-name">Helm</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">CI/CD</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">GitLab</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">ArgoCD</span>
+        </div>
+        <div class="skill-item" data-project="cloud">
+          <span class="skill-name">Azure (Databricks, Synapse, ML)</span>
+        </div>
+        <div class="skill-item" data-project="cloud">
+          <span class="skill-name">Azure AD</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">ServiceNow</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Microsoft Power Platform</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Power Apps</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Power Automate</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Copilot Studio</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Microsoft Graph API</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Microsoft Teams</span>
+        </div>
+        <div class="skill-item" data-project="msc">
+          <span class="skill-name">Scikit-learn</span>
+        </div>
+        <div class="skill-item" data-project="msc">
+          <span class="skill-name">Deep Learning</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Java</span>
+        </div>
+        <div class="skill-item" data-project="dev">
+          <span class="skill-name">Bash</span>
+        </div>
+        <div class="skill-item" data-project="all">
+          <span class="skill-name">SQL</span>
+        </div>
+        <div class="skill-item" data-project="analytics">
+          <span class="skill-name">Tableau</span>
+        </div>
+        <div class="skill-item" data-project="analytics">
+          <span class="skill-name">Power BI</span>
+        </div>
+        <div class="skill-item" data-project="analytics">
+          <span class="skill-name">Pandas</span>
+        </div>
+        <div class="skill-item" data-project="analytics">
+          <span class="skill-name">NumPy</span>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">
+        <span class="section-icon">💼</span>
+        Professional Experience
+        <span class="section-underline"></span>
+      </h2>
+      
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-role">Platform Engineer</h3>
+            <p class="experience-company">Kyndryl</p>
+          </div>
+          <p class="experience-date">January 2025 - Present (9 months) | Bangalore</p>
+        </div>
+        <div class="experience-description">
+          <ul class="experience-bullets">
+            <li><strong>AWS Infrastructure Automation:</strong> Learned how to build various AWS resources using Terraform for retail sector clients, including EC2 instances, S3 buckets, VPCs, security groups, IAM roles, RDS databases, and Lambda functions with reusable infrastructure templates</li>
+            <li><strong>Backstage Developer Portal:</strong> Developed Backstage developer portal with custom "Cost Insights" plugin, giving teams real-time AWS cost visibility and standardized infrastructure workflows</li>
+            <li><strong>Containerization & CI/CD:</strong> Containerized React.js, Node.js, and Java applications, set up CI/CD pipelines, and deployed to Amazon ECR with Lambda functions for serverless architecture</li>
+            <li><strong>GitOps Deployment:</strong> Learned ArgoCD integration with Backstage for GitOps deployment automation</li>
+            <li><strong>AI-Powered Infrastructure:</strong> Created AI-powered AWS Landing Zone using Flash 2.5 that builds custom architectures (hub-spoke, microservices) based on client industry needs (healthcare, finance, retail)</li>
+            <li><strong>Enterprise Automation (Current):</strong> Currently integrating ServiceNow with Microsoft Power Platform (Power Apps, Automate, BI) and Copilot Studio to automate ticket resolution using Agentic AI</li>
+            <li><strong>Intelligent Agent Development:</strong> Building intelligent agents that connect ServiceNow incidents to Microsoft Teams, Graph API, and Azure AD for seamless enterprise workflows</li>
+          </ul>
+        </div>
+        <div class="experience-skills">
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">AWS (EC2, S3, VPC, IAM, RDS, Lambda)</span>
+          <span class="skill-tag">Backstage</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Amazon ECR</span>
+          <span class="skill-tag">ArgoCD</span>
+          <span class="skill-tag">ServiceNow</span>
+          <span class="skill-tag">Power Platform</span>
+          <span class="skill-tag">Power Apps</span>
+          <span class="skill-tag">Power Automate</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Copilot Studio</span>
+          <span class="skill-tag">Microsoft Teams</span>
+          <span class="skill-tag">Graph API</span>
+          <span class="skill-tag">Azure AD</span>
+          <span class="skill-tag">Agentic AI</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Java</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-role">Computer Vision Engineer (Internship)</h3>
+            <p class="experience-company">Zero2AI</p>
+          </div>
+          <p class="experience-date">January 2024 - March 2024</p>
+        </div>
+        <p class="experience-description">
+          Engineered high-scale AI pipelines using diffusion models (SDXL, DALL-E), enhancing model accuracy by 15% and application 
+          performance by 20%. Developed end-to-end AI workflows integrated with Azure Databricks and Kubernetes for scalable production 
+          deployment. Conducted advanced evaluations on 7 AI architectures, delivering actionable insights and fine-tuning recommendations. 
+          Partnered with cross-functional teams to align technical AI solutions with business objectives.
+        </p>
+        <div class="experience-skills">
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Diffusion Models</span>
+          <span class="skill-tag">Azure Databricks</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-role">Software Engineer (Internship)</h3>
+            <p class="experience-company">Evertz</p>
+          </div>
+          <p class="experience-date">October 2022 - July 2023</p>
+        </div>
+        <p class="experience-description">
+          Automated OTT platform monitoring for major sports leagues (NHL, NBA, MLB), reducing error rates by 20% and validating 10,000+ 
+          media assets efficiently. Implemented comprehensive test automation frameworks combining manual and automated methods, cutting 
+          failure rates from 30% to under 10%. Designed advanced data analysis workflows using Python (Pandas, NumPy) with interactive 
+          visualizations. Optimized distributed data systems for enhanced reliability in high-demand, real-time media environments.
+        </p>
+        <div class="experience-skills">
+          <span class="skill-tag">Test Automation</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">OTT Platforms</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-role">GPI Automation Services (Internship)</h3>
+            <p class="experience-company">Atkins</p>
+          </div>
+          <p class="experience-date">February 2022 - May 2022</p>
+        </div>
+        <p class="experience-description">
+          Developed and deployed 10+ interactive Power BI dashboards with real-time geospatial data integration for transportation planning. 
+          Automated geospatial data workflows, reducing manual processing by 40% and improving data consistency. Led Python-based enhancements 
+          to the PANGEA project, enabling seamless connectivity across UK land and sea routes. Transformed raw datasets into actionable insights 
+          with clear visualizations and predictive analytics.
+        </p>
+        <div class="experience-skills">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Geospatial Data</span>
+          <span class="skill-tag">Data Automation</span>
+          <span class="skill-tag">Visualization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title">Education & Certifications</h2>
+      
+      <div class="education-item">
+        <div class="education-header">
+          <div>
+            <h3 class="education-degree">🎓 MSc in Artificial Intelligence</h3>
+            <p class="education-school">Queen Mary University of London</p>
+          </div>
+          <p class="education-date">September 2023 - September 2024</p>
+        </div>
+        <p class="education-description">
+          <strong>Commonwealth Masters Scholar (Fully Funded to study in the UK)</strong><br>
+          Commonwealth Scholarship for Innovation, Technology, and Sustainability. Advanced coursework in Artificial Intelligence, 
+          Machine Learning, Applied Statistics, Computer Vision, and Deep Learning. Conducted research on novel AI techniques and 
+          methodologies with focus on practical applications in computer vision and NLP.
+        </p>
+        <div class="education-skills">
+          <span class="skill-tag">Artificial Intelligence</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Deep Learning</span>
+          <span class="skill-tag">Applied Statistics</span>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <div class="education-header">
+          <div>
+            <h3 class="education-degree">🎓 B.Tech in Computer Science and Engineering</h3>
+            <p class="education-school">Reva University, Bangalore</p>
+          </div>
+          <p class="education-date">August 2019 - July 2023</p>
+        </div>
+        <p class="education-description">
+          <strong>Runners-up, National IET Hackathon for Sustainability</strong><br>
+          Comprehensive education in computer science fundamentals including algorithms, data structures, software engineering, 
+          and system design. Specialized in AI/ML applications, cloud computing, and software development. Active participant 
+          in hackathons and technical competitions.
+        </p>
+        <div class="education-skills">
+          <span class="skill-tag">Computer Science</span>
+          <span class="skill-tag">Software Engineering</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">Data Structures</span>
+        </div>
+      </div>
+
+      <div class="certifications-section">
+        <h3 class="section-subtitle">📜 Professional Certifications</h3>
+        <div class="certifications-grid">
+          <div class="cert-item">
+            <strong>☁️ AWS Certified Cloud Practitioner</strong>
+            <p>Amazon Web Services</p>
+          </div>
+          <div class="cert-item">
+            <strong>🤖 Azure AI Engineer Associate</strong>
+            <p>Microsoft</p>
+          </div>
+          <div class="cert-item">
+            <strong>🔒 Security, Compliance, and Identity Fundamentals</strong>
+            <p>Microsoft</p>
+          </div>
+          <div class="cert-item">
+            <strong>🧮 Mathematics for Machine Learning: Multivariate Calculus</strong>
+            <p>Imperial College London</p>
+          </div>
+          <div class="cert-item">
+            <strong>🧠 Neural Networks and Deep Learning</strong>
+            <p>DeepLearning.AI</p>
+          </div>
+          <div class="cert-item">
+            <strong>📊 SQL for Data Science</strong>
+            <p>IBM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">
+        <span class="section-icon">🚀</span>
+        Featured Projects
+        <span class="section-underline"></span>
+      </h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1: Agentic AI Backstage Integration -->
+        <div class="project-card" id="project-agentic-ai">
+          <div class="project-image-container">
+            <img src="./assets/project-1.png" alt="Agentic AI Backstage" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">🤖 AI-Powered Backstage Integration</h3>
+            <div class="project-tags">
+              <span class="project-tag">Agentic AI</span>
+              <span class="project-tag">A2A Protocol</span>
+              <span class="project-tag">MCP Protocol</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Backstage</span>
+            </div>
+            <p class="project-description">
+              Leading-edge AI integration into Backstage developer platform featuring intelligent document summarization, automated workflow 
+              orchestration, and seamless Jira/Confluence integration. Implements A2A and MCP protocols for intelligent chat interfaces that 
+              automate ticket creation, analyze documentation, and streamline developer workflows. SonarQube integration for code quality automation.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ Intelligent automation</span>
+              <span class="highlight">✅ Multi-platform integration</span>
+              <span class="highlight">✅ Developer productivity boost</span>
+            </div>
+            <a href="https://github.com/Breeganzo" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Backstage Developer Platform -->
+        <div class="project-card" id="project-backstage">
+          <div class="project-image-container">
+            <img src="./assets/project-2.png" alt="Backstage Platform" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">🚀 Backstage Developer Platform</h3>
+            <div class="project-tags">
+              <span class="project-tag">Backstage</span>
+              <span class="project-tag">Go</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">GitHub Actions</span>
+            </div>
+            <p class="project-description">
+              Comprehensive developer platform implementation with standardized application templates for Go, Flask, and React. Features 
+              automated Docker image builds, CI/CD pipelines with GitHub Actions, and AWS ECR integration. Created reusable templates that 
+              improved team productivity and ensured consistent development environments across the organization.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ Multi-language templates</span>
+              <span class="highlight">✅ Automated CI/CD</span>
+              <span class="highlight">✅ Containerized deployment</span>
+            </div>
+            <a href="https://github.com/Breeganzo" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Infrastructure as Code with Terraform -->
+        <div class="project-card" id="project-terraform">
+          <div class="project-image-container">
+            <img src="./assets/project-3.png" alt="Terraform IaC" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">☁️ Terraform Infrastructure as Code</h3>
+            <div class="project-tags">
+              <span class="project-tag">Terraform</span>
+              <span class="project-tag">AWS</span>
+              <span class="project-tag">EC2</span>
+              <span class="project-tag">S3</span>
+              <span class="project-tag">RDS</span>
+              <span class="project-tag">IaC</span>
+            </div>
+            <p class="project-description">
+              Designed and implemented reusable Terraform templates for AWS cloud infrastructure automation. Created standardized modules for 
+              EC2 instances, S3 buckets, PostgreSQL RDS databases, and ECR container registries. Enabled rapid client POC deployment with 
+              consistent, scalable, and production-ready infrastructure configurations across multiple environments.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ Reusable modules</span>
+              <span class="highlight">✅ Multi-environment support</span>
+              <span class="highlight">✅ Rapid POC deployment</span>
+            </div>
+            <a href="https://github.com/Breeganzo/AWS_Landing_Zone" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Docker & Lambda Deployment -->
+        <div class="project-card" id="project-docker">
+          <div class="project-image-container">
+            <img src="./assets/project-1.png" alt="Docker Lambda" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">🐳 Docker Containerization & AWS Lambda</h3>
+            <div class="project-tags">
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">AWS ECR</span>
+              <span class="project-tag">Lambda</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">CI/CD</span>
+            </div>
+            <p class="project-description">
+              Built and optimized Docker images for TVG (The Very Group - UK) project with automated deployment pipelines to AWS ECR. 
+              Implemented serverless Lambda functions for scalable cloud-native processing. Streamlined container deployment reducing 
+              deployment time and ensuring consistent application environments across development and production.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ Automated pipelines</span>
+              <span class="highlight">✅ Serverless architecture</span>
+              <span class="highlight">✅ Production-ready</span>
+            </div>
+            <a href="https://github.com/Breeganzo" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: Computer Vision AI Pipelines -->
+        <div class="project-card">
+          <div class="project-image-container">
+            <img src="./assets/project-2.png" alt="CV AI Pipeline" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">👁️ High-Scale AI Vision Pipelines</h3>
+            <div class="project-tags">
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">SDXL</span>
+              <span class="project-tag">Azure Databricks</span>
+              <span class="project-tag">Kubernetes</span>
+              <span class="project-tag">PyTorch</span>
+            </div>
+            <p class="project-description">
+              Engineered production-scale AI pipelines using diffusion models (SDXL, DALL-E) at Zero2AI, enhancing model accuracy by 15% and 
+              performance by 20%. Integrated with Azure Databricks and Kubernetes for scalable deployment. Conducted comprehensive evaluations 
+              on 7 AI architectures, delivering actionable insights for model optimization and production readiness.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ 15% accuracy improvement</span>
+              <span class="highlight">✅ 20% performance boost</span>
+              <span class="highlight">✅ Production-scale deployment</span>
+            </div>
+            <a href="https://github.com/Breeganzo" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Personal Portfolio Website -->
+        <div class="project-card">
+          <div class="project-image-container">
+            <img src="./assets/project-3.png" alt="Portfolio Website" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">🌐 Interactive Portfolio</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML/CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Responsive</span>
+              <span class="project-tag">GitHub Pages</span>
+            </div>
+            <p class="project-description">
+              Modern, fully responsive personal portfolio built with vanilla JavaScript featuring smooth animations, auto-typing effects, 
+              and optimized performance (95+ Lighthouse score). Implements best practices in responsive design, SEO, and accessibility. 
+              Clean code architecture with modular CSS and efficient DOM manipulation.
+            </p>
+            <div class="project-highlights">
+              <span class="highlight">✅ 95+ Lighthouse score</span>
+              <span class="highlight">✅ Zero dependencies</span>
+              <span class="highlight">✅ Fully responsive</span>
+            </div>
+            <a href="https://github.com/Breeganzo/Personal_Website" target="_blank" class="project-link">
+              <strong>View on GitHub →</strong>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">
+        <span class="section-icon">📬</span>
+        Let's Build Something Amazing Together
+        <span class="section-underline"></span>
+      </h2>
+      <div class="contact-content">
+        <p class="contact-intro">
+          <strong>Open to Platform Engineering, DevOps, and AI/ML Engineering opportunities.</strong><br>
+          Whether you're building cloud-native applications, implementing intelligent automation, or scaling infrastructure, let's connect!
+        </p>
+        
+        <div class="contact-value-props">
+          <div class="value-prop">
+            <h3>☁️ Cloud & DevOps</h3>
+            <p>AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, IaC</p>
+          </div>
+          <div class="value-prop">
+            <h3>🤖 AI & Automation</h3>
+            <p>Agentic AI, A2A/MCP Protocols, TensorFlow, PyTorch, Computer Vision</p>
+          </div>
+          <div class="value-prop">
+            <h3>🚀 Platform Engineering</h3>
+            <p>Backstage, GitHub Actions, Lambda, Helm, Developer Productivity</p>
+          </div>
+        </div>
+        
+        <p class="contact-text">📧 Get in touch via email, phone, LinkedIn, or GitHub:</p>
+        <div class="contact-links">
+          <a href="mailto:anthonybreeganzo02@gmail.com" class="contact-link contact-email">
+            <img src="./assets/email.png" alt="Email" class="contact-icon" />
+            <span>anthonybreeganzo02@gmail.com</span>
+          </a>
+          <a href="tel:+919108615757" class="contact-link">
+            <img src="./assets/email.png" alt="Phone" class="contact-icon" />
+            <span>+91 9108615757</span>
+          </a>
+          <a href="https://www.linkedin.com/in/breeganzo/" target="_blank" class="contact-link">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="contact-icon" />
+            <span>Connect on LinkedIn</span>
+          </a>
+          <a href="https://github.com/Breeganzo" target="_blank" class="contact-link">
+            <img src="./assets/github.png" alt="GitHub" class="contact-icon" />
+            <span>Follow on GitHub</span>
+          </a>
+        </div>
+        
+        <div class="quick-facts">
+          <p><strong>📍 Location:</strong> Bangalore, India (Open to remote & relocation opportunities)</p>
+          <p><strong>💼 Currently:</strong> Platform Engineer at Kyndryl | MSc AI Graduate (QMUL)</p>
+          <p><strong>🎯 Availability:</strong> Open to full-time roles and consulting projects</p>
+          <p><strong>🏆 Highlights:</strong> AWS Certified | Azure Fundamentals | Commonwealth Scholar | B.Tech CSE</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3 class="form-title">📨 Send Me a Message</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, opportunity, or how I can help..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">📤</span>
+            </button>
+            <p class="form-note">💡 I'll get back to you within 24 hours!</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Anthony Breeganzo Thomas. All Rights Reserved.</p>
+      <p class="footer-tech">Built with HTML, CSS & Vanilla JavaScript</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
