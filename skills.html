@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Anthony Breeganzo Thomas</title>
+    <link rel="stylesheet" href="style-pages.css">
+    <style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-category-card {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(74, 144, 226, 0.05));
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .skill-category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.15);
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-icon {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1.rem;
+        }
+
+        .skill-level {
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        .skill-level.beginner {
+            color: #6c757d;
+            background: rgba(108, 117, 125, 0.1);
+        }
+
+        .skill-level.intermediate {
+            color: #0066CC;
+            background: rgba(0, 102, 204, 0.1);
+        }
+
+        .skill-level.advanced {
+            color: #28a745;
+            background: rgba(40, 167, 69, 0.1);
+        }
+
+        .skill-level.expert {
+            color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: var(--light-blue);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 10px;
+            transition: width 1.5s ease-out;
+            width: 0;
+        }
+
+        .skill-item.animate .skill-progress {
+            width: var(--progress-width);
+        }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-icon {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 16px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tech-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="modern-nav">
+        <div class="nav-brand">
+            <h1><a href="index.html">Anthony Breeganzo Thomas</a></h1>
+            <p class="nav-subtitle">Platform Engineer @ Kyndryl</p>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html">
+                    <span class="nav-icon">👨‍💻</span>
+                    <span class="nav-text">About</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="skills.html">
+                    <span class="nav-icon">⚡</span>
+                    <span class="nav-text">Skills</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="experience.html">
+                    <span class="nav-icon">💼</span>
+                    <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="projects.html">
+                    <span class="nav-icon">🚀</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Technical Skills</h1>
+            <p class="page-subtitle">DevOps • Cloud • AI/ML • Full Stack Development</p>
+        </div>
+    </header>
+
+    <!-- Skills Content -->
+    <main class="page-content">
+        <section class="content-section">
+            <div class="section-header">
+                <h2>⚡ Core Competencies</h2>
+            </div>
+            <div class="skills-grid">
+                <!-- DevOps & Cloud -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">☁️</span>
+                        <h3 class="category-title">DevOps & Cloud</h3>
+                    </div>
+                    <div class="skill-item" data-progress="100">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="skill-icon">
+                                <span class="skill-name">AWS</span>
+                            </div>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">
+                                <span class="skill-name">Docker & Kubernetes</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="100">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="skill-icon">
+                                <span class="skill-name">Terraform</span>
+                            </div>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="skill-icon">
+                                <span class="skill-name">Azure</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CI/CD & Automation -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">🔄</span>
+                        <h3 class="category-title">CI/CD & Automation</h3>
+                    </div>
+                    <div class="skill-item" data-progress="100">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" class="skill-icon">
+                                <span class="skill-name">GitHub Actions</span>
+                            </div>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" class="skill-icon">
+                                <span class="skill-name">GitLab CI/CD</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://backstage.io/img/logo.svg" alt="Backstage" class="skill-icon">
+                                <span class="skill-name">Backstage</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" alt="ArgoCD" class="skill-icon">
+                                <span class="skill-name">ArgoCD</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">🤖</span>
+                        <h3 class="category-title">AI/ML</h3>
+                    </div>
+                    <div class="skill-item" data-progress="100">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-icon">
+                                <span class="skill-name">TensorFlow & PyTorch</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Agentic AI" class="skill-icon">
+                                <span class="skill-name">Agentic AI (A2A/MCP)</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="Computer Vision" class="skill-icon">
+                                <span class="skill-name">Computer Vision</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3 class="category-title">Programming</h3>
+                    </div>
+                    <div class="skill-item" data-progress="100">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <span class="skill-level expert">Expert</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
+                                <span class="skill-name">JavaScript/React</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="25">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" class="skill-icon">
+                                <span class="skill-name">Go</span>
+                            </div>
+                            <span class="skill-level beginner">Beginner</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="25">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon">
+                                <span class="skill-name">Flask</span>
+                            </div>
+                            <span class="skill-level beginner">Beginner</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Analytics -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">📊</span>
+                        <h3 class="category-title">Data & Analytics</h3>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon">
+                                <span class="skill-name">SQL</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon">
+                                <span class="skill-name">Pandas & NumPy</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="skill-icon">
+                                <span class="skill-name">Power BI</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" class="skill-icon">
+                                <span class="skill-name">Tableau</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft Platform -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-icon">🔷</span>
+                        <h3 class="category-title">Microsoft Platform</h3>
+                    </div>
+                    <div class="skill-item" data-progress="75">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Copilot Studio" class="skill-icon">
+                                <span class="skill-name">Copilot Studio</span>
+                            </div>
+                            <span class="skill-level advanced">Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Power Platform" class="skill-icon">
+                                <span class="skill-name">Power Platform</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://www.vectorlogo.zone/logos/servicenow/servicenow-icon.svg" alt="ServiceNow" class="skill-icon">
+                                <span class="skill-name">ServiceNow</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-progress="50">
+                        <div class="skill-header">
+                            <div class="skill-name-wrapper">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Microsoft Teams" class="skill-icon">
+                                <span class="skill-name">Microsoft Teams & Graph API</span>
+                            </div>
+                            <span class="skill-level intermediate">Intermediate</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="--progress-width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to leverage my skills?</h2>
+            <p>Let's discuss how I can contribute to your project</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn-primary">View My Projects</a>
+                <a href="contact.html" class="btn-secondary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2025 Anthony Breeganzo Thomas. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/breeganzo" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Breeganzo" target="_blank">GitHub</a>
+            <a href="mailto:anthonybreeganzo02@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="script-pages.js"></script>
+</body>
+</html>
