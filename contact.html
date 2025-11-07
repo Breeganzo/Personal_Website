@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Anthony Breeganzo Thomas</title>
-    <link rel="stylesheet" href="style-pages.css">
+    <meta name="description" content="Get in touch with Anthony Breeganzo Thomas. Open to new opportunities, collaborations, and discussions about Platform Engineering & AI.">
+    <link rel="stylesheet" href="css/style-pages.css">
     <style>
         .contact-container {
             display: grid;
@@ -249,6 +250,7 @@
         </ul>
     </nav>
 
+    <main class="page-content">
     <!-- Page Header -->
     <header class="page-header">
         <div class="header-content">
@@ -327,7 +329,7 @@
                 <h2>Send Me a Message</h2>
                 <p>Fill out the form below and I'll get back to you as soon as possible.</p>
                 
-                <form action="mailto:anthonybreeganzo02@gmail.com" method="POST" enctype="text/plain">
+                <form action="https://formspree.io/f/mldoqkjk" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -340,13 +342,16 @@
 
                     <div class="form-group">
                         <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        <input type="text" id="subject" name="_subject" required placeholder="Project Inquiry">
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" required placeholder="Tell me about your project or inquiry..."></textarea>
                     </div>
+
+                    <!-- Hidden field for email reply-to -->
+                    <input type="hidden" name="_replyto" id="emailReply">
 
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -409,6 +414,15 @@
         </svg>
     </button>
 
-    <script src="script-pages.js"></script>
+    </main>
+    <!-- End Main Content -->
+
+    <script src="js/script-pages.js"></script>
+    <script>
+        // Copy email to reply-to field for Formspree
+        document.getElementById('email').addEventListener('input', function() {
+            document.getElementById('emailReply').value = this.value;
+        });
+    </script>
 </body>
 </html>

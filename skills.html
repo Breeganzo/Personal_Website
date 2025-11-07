@@ -4,165 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills | Anthony Breeganzo Thomas</title>
-    <link rel="stylesheet" href="style-pages.css">
-    <style>
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .skill-category-card {
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(74, 144, 226, 0.05));
-            padding: 2rem;
-            border-radius: 16px;
-            border-left: 4px solid var(--primary-blue);
-            transition: var(--transition);
-        }
-
-        .skill-category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .category-icon {
-            font-size: 2.5rem;
-        }
-
-        .category-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
-        .skill-item {
-            background: white;
-            padding: 1rem 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .skill-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.15);
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-name-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .skill-icon {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-        }
-
-        .skill-name {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 1.rem;
-        }
-
-        .skill-level {
-            font-size: 0.875rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            white-space: nowrap;
-        }
-
-        .skill-level.beginner {
-            color: #6c757d;
-            background: rgba(108, 117, 125, 0.1);
-        }
-
-        .skill-level.intermediate {
-            color: #0066CC;
-            background: rgba(0, 102, 204, 0.1);
-        }
-
-        .skill-level.advanced {
-            color: #28a745;
-            background: rgba(40, 167, 69, 0.1);
-        }
-
-        .skill-level.expert {
-            color: #dc3545;
-            background: rgba(220, 53, 69, 0.1);
-        }
-
-        .skill-bar {
-            height: 8px;
-            background: var(--light-blue);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
-            border-radius: 10px;
-            transition: width 1.5s ease-out;
-            width: 0;
-        }
-
-        .skill-item.animate .skill-progress {
-            width: var(--progress-width);
-        }
-
-        .tech-stack-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .tech-icon {
-            text-align: center;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 16px;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .tech-icon:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .tech-icon img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
-        }
-
-        .tech-name {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-    </style>
+    <meta name="description" content="Technical skills in AWS, Terraform, Kubernetes, Agentic AI, Python, DevOps automation, CI/CD, and cloud-native development.">
+    <link rel="stylesheet" href="css/style-pages.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -248,7 +91,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">
-                                <span class="skill-name">Docker & Kubernetes</span>
+                                <span class="skill-name" title="Docker & Kubernetes">Docker & Kubernetes</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -292,7 +135,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" class="skill-icon">
-                                <span class="skill-name">GitHub Actions</span>
+                                <span class="skill-name" title="GitHub Actions">GitHub Actions</span>
                             </div>
                             <span class="skill-level expert">Expert</span>
                         </div>
@@ -304,7 +147,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" class="skill-icon">
-                                <span class="skill-name">GitLab CI/CD</span>
+                                <span class="skill-name" title="GitLab CI/CD">GitLab CI/CD</span>
                             </div>
                             <span class="skill-level advanced">Advanced</span>
                         </div>
@@ -316,7 +159,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://backstage.io/img/logo.svg" alt="Backstage" class="skill-icon">
-                                <span class="skill-name">Backstage</span>
+                                <span class="skill-name" title="Backstage (Spotify Developer Portal)">Backstage</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -360,7 +203,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-icon">
-                                <span class="skill-name">TensorFlow & PyTorch</span>
+                                <span class="skill-name" title="TensorFlow & PyTorch">TensorFlow & PyTorch</span>
                             </div>
                             <span class="skill-level advanced">Advanced</span>
                         </div>
@@ -372,7 +215,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Agentic AI" class="skill-icon">
-                                <span class="skill-name">Agentic AI (A2A/MCP)</span>
+                                <span class="skill-name" title="Agentic AI (Agent-to-Agent / Model Context Protocol)">Agentic AI (A2A/MCP)</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -384,7 +227,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="Computer Vision" class="skill-icon">
-                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-name" title="Computer Vision">Computer Vision</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -428,7 +271,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon">
-                                <span class="skill-name">JavaScript/React</span>
+                                <span class="skill-name" title="JavaScript/React">JavaScript/React</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -451,7 +294,7 @@
                     <div class="skill-item" data-progress="25">
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" class="skill-icon" style="filter: invert(0);">
                                 <span class="skill-name">Flask</span>
                             </div>
                             <span class="skill-level beginner">Beginner</span>
@@ -528,7 +371,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Copilot Studio" class="skill-icon">
-                                <span class="skill-name">Copilot Studio</span>
+                                <span class="skill-name" title="Microsoft Copilot Studio">Copilot Studio</span>
                             </div>
                             <span class="skill-level advanced">Advanced</span>
                         </div>
@@ -540,7 +383,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Power Platform" class="skill-icon">
-                                <span class="skill-name">Power Platform</span>
+                                <span class="skill-name" title="Microsoft Power Platform">Power Platform</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -552,7 +395,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://www.vectorlogo.zone/logos/servicenow/servicenow-icon.svg" alt="ServiceNow" class="skill-icon">
-                                <span class="skill-name">ServiceNow</span>
+                                <span class="skill-name" title="ServiceNow">ServiceNow</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -564,7 +407,7 @@
                         <div class="skill-header">
                             <div class="skill-name-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Microsoft Teams" class="skill-icon">
-                                <span class="skill-name">Microsoft Teams & Graph API</span>
+                                <span class="skill-name" title="Microsoft Teams & Graph API">Microsoft Teams & Graph API</span>
                             </div>
                             <span class="skill-level intermediate">Intermediate</span>
                         </div>
@@ -573,6 +416,75 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Currently Learning Section -->
+        <section class="content-section currently-learning">
+            <div class="section-header">
+                <h2>🌱 Currently Learning</h2>
+                <p class="section-subtitle">Always exploring new technologies and expanding my skill set</p>
+            </div>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <div class="learning-icon">🤖</div>
+                    <h3>Advanced Agentic AI</h3>
+                    <p>Deepening expertise in A2A (Agent-to-Agent) communication protocols and Model Context Protocol (MCP) for building intelligent autonomous systems</p>
+                    <div class="learning-progress">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress-bar-learning">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">☸️</div>
+                    <h3>Kubernetes Deep Dive</h3>
+                    <p>Advanced container orchestration patterns, service meshes, and cloud-native architecture best practices</p>
+                    <div class="learning-progress">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress-bar-learning">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">🔧</div>
+                    <h3>Go for Microservices</h3>
+                    <p>Building high-performance microservices and cloud-native applications using Go</p>
+                    <div class="learning-progress">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>35%</span>
+                        </div>
+                        <div class="progress-bar-learning">
+                            <div class="progress-fill" style="width: 35%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning-card">
+                    <div class="learning-icon">🔐</div>
+                    <h3>Platform Security</h3>
+                    <p>DevSecOps practices, container security, and zero-trust architecture implementation</p>
+                    <div class="learning-progress">
+                        <div class="progress-label">
+                            <span>Progress</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress-bar-learning">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="learning-note">
+                <p>💡 <strong>Learning Philosophy:</strong> I dedicate time each week to hands-on experimentation, online courses, and building practical projects with new technologies. Check out my <a href="projects.html">projects page</a> to see these skills in action!</p>
             </div>
         </section>
 
@@ -603,6 +515,6 @@
         </svg>
     </button>
 
-    <script src="script-pages.js"></script>
+    <script src="js/script-pages.js"></script>
 </body>
 </html>

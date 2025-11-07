@@ -1,8 +1,24 @@
 // Shared JavaScript for all portfolio pages
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add page transition animation
-    document.body.classList.add('page-transition');
+    // Add page fade-in animation on load
+    document.body.classList.add('page-fade-in');
+    
+    // Smooth page transitions for navigation links
+    const navLinks = document.querySelectorAll('a[href$=".html"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            // Only apply to internal navigation (not external links)
+            if (href && !this.hasAttribute('target')) {
+                e.preventDefault();
+                document.body.classList.add('page-fade-out');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300); // Match CSS transition duration
+            }
+        });
+    });
     
     // Animate skill progress bars on scroll
     const skillItems = document.querySelectorAll('.skill-item');
@@ -84,9 +100,23 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, { threshold: 0.1 });
         
-        animateOnScroll.forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
+        animateOnScroll.forEach((element, index) => {
+            // Check if element is already in viewport on page load
+            const rect = element.getBoundingClientRect();
+            const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isInViewport) {
+                // Element is already visible - animate immediately
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            } else {
+                // Element not in view - set initial hidden state
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+            }
+            
             element.style.transition = 'all 0.6s ease';
             scrollObserver.observe(element);
         });

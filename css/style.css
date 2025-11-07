@@ -37,6 +37,29 @@ body {
     overflow-x: hidden;
 }
 
+/* Page Content Wrapper for Transitions */
+main {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Page Transition Effects - Only fade content, not navigation */
+body.page-fade-out main {
+    opacity: 0;
+}
+
+body.page-fade-in main {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* ========================================
    MODERN NAVIGATION WITH HOVER PREVIEW
    ======================================== */
@@ -55,6 +78,8 @@ body {
     align-items: center;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transform: translateZ(0); /* Hardware acceleration for smooth rendering */
+    will-change: transform; /* Optimize for position changes */
 }
 
 .nav-brand {
