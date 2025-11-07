@@ -113,7 +113,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scroll-padding-top: 150px; /* Increased offset for better section visibility */
+  scroll-padding-top: 120px; /* Optimized offset for section visibility without excessive jumping */
 }
 
 body {

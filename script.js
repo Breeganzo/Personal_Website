@@ -235,8 +235,8 @@ function enhanceNavigationLinks() {
       const targetSection = document.querySelector(targetId);
       
       if (targetSection) {
-        // Add highlight animation
-        targetSection.style.transition = 'all 0.5s ease';
+        // Disable auto-update during programmatic scroll
+        isUserScrolling = false;
         
         // Scroll to section
         targetSection.scrollIntoView({
@@ -247,6 +247,10 @@ function enhanceNavigationLinks() {
         // Add visible class immediately
         setTimeout(() => {
           targetSection.classList.add('section-visible');
+          // Re-enable auto-update after scroll completes
+          setTimeout(() => {
+            isUserScrolling = true;
+          }, 1000);
         }, 100);
       }
     });
@@ -336,7 +340,12 @@ function linkSkillsToProjects() {
 
 // Update URL hash when scrolling to sections
 let scrollTimeout;
+let isUserScrolling = true; // Track if scroll is user-initiated
+
 function updateURLOnScroll() {
+  // Only update URL if user is actively scrolling (not programmatic scroll)
+  if (!isUserScrolling) return;
+  
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
     const sections = document.querySelectorAll('section[id]');
@@ -345,7 +354,7 @@ function updateURLOnScroll() {
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      const scrollPosition = window.scrollY + 150; // Offset for sticky nav
+      const scrollPosition = window.scrollY + 200; // Offset for sticky nav
       
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         currentSection = section.getAttribute('id');
@@ -363,7 +372,7 @@ function updateURLOnScroll() {
         }
       });
     }
-  }, 100);
+  }, 150); // Increased debounce time for better performance
 }
 
 // Scroll to top button functionality
